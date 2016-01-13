@@ -9,20 +9,23 @@ for (let key in langData) {
   _numberOfGreetings++;
 }
 
-// total number of available languages 
-const numberOfLanguages = langData['hello'].length
 
-const languageList = Object.keys(langData)
+const languageList = Object.keys(langData['hello'])
+  // total number of available languages 
+const numberOfLanguages = languageList.length
 
+const getRandomLanguage = function () {
+  // get random index for random language
+  const _randomLangIndex = _.random(numberOfLanguages - 1)
+  const _randomLang = languageList[_randomLangIndex]
+}
 
 const getRandomGreeting = function (key) {
   // if the key is not supported, default to 'hello'
   if (!(key in langData)) {
     key = 'hello';
   }
-  // get random index for random language
-  const _randomLangIndex = _.random(numberOfLanguages - 1)
-  return langData[key][_randomLangIndex]['text']
+  return langData[key][getRandomLanguage()]
 }
 
 module.exports = {
@@ -30,5 +33,6 @@ module.exports = {
   numberOfLanguages: numberOfLanguages,
   languageList: languageList,
   randomGreeting: getRandomGreeting,
+  randomLanguage: getRandomLanguage,
   randomIndex: _.random(numberOfLanguages - 1)
 }

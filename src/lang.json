@@ -1,45 +1,18 @@
 {
-  "hello": [{
-    "language": "Abkhaz",
-    "text": "Бзиа збаша (Bzia zbaşa)"
-  }, {
-    "language": "Adyghe",
-    "text": "Фэсапщы"
-  }, {
-    "language": "Afrikaans",
-    "text": "Hallo"
-  }, {
-    "language": "Aklan",
-    "text": "Kamusta"
-  }, {
-    "language": "Chinese",
-    "text": "你好！（您好）"
-  }, {
-    "language": "English",
-    "text": "How are you?"
-  }],
-
-  "goodbye": [{
-    "language": "Abkhaz",
-    "text": "Bye temp1"
-  }, {
-    "language": "Adyghe",
-    "text": "Bye temp2"
-  }, {
-    "language": "Afrikaans",
-    "text": "Bye temp3"
-  }, {
-    "language": "Aklan",
-    "text": "Bye temp4"
-  }, {
-    "language": "Aklan",
-    "text": "Kamusta"
-  }, {
-    "language": "Chinese",
-    "text": "再见"
-  }, {
-    "language": "English",
-    "text": "Goodbye"
-  }]
-
+  "hello": {
+    "Abkhaz": "Бзиа збаша (Bzia zbaşa)",
+    "Adyghe": "Фэсапщы",
+    "Afrikaans": "Hallo",
+    "Aklan": "Kamusta",
+    "Chinese": "你好！（您好）",
+    "English": "How are you?"
+  },
+  "goodbye": {
+    "Abkhaz": "Goodbye placeholder",
+    "Adyghe": "ФэGoodbye placeholder",
+    "Afrikaans": "Goodbye placeholder",
+    "Aklan": "KaGoodbye placeholder",
+    "Chinese": "Goodbye placeholder",
+    "English": "How arGoodbye placeholder"
+  }
 }
