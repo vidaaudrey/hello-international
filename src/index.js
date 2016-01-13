@@ -20,19 +20,22 @@ const getRandomLanguage = function () {
   return languageList[_randomLangIndex]
 }
 
-const getRandomGreeting = function (key) {
-  // if the key is not supported, default to 'hello'
-  if (!(key in langData)) {
-    key = 'hello';
+const getRandomGreeting = function (message, language) {
+  // if the message is not supported, default to 'hello'
+  if (!(message in langData)) {
+    message = 'hello';
   }
-  return langData[key][getRandomLanguage()]
+  language = language || getRandomLanguage()
+  console.log('lan', language)
+  return langData[message][language]
 }
 
 module.exports = {
   all: langData,
+  allMessages: Object.keys(langData),
   numberOfLanguages: numberOfLanguages,
   languageList: languageList,
-  randomGreeting: getRandomGreeting,
-  randomLanguage: getRandomLanguage,
+  getRandomGreeting: getRandomGreeting,
+  getRandomLanguage: getRandomLanguage,
   randomIndex: _.random(numberOfLanguages - 1)
 }

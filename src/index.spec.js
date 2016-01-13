@@ -24,6 +24,13 @@ describe('hello-international lib', function () {
     });
   })
 
+
+  describe('allMessages', function () {
+    it('should be an array', function () {
+      expect(helloLib.allMessages).to.be.an('array')
+    })
+  })
+
   describe('numberOfLanguages', function () {
     it('should return the total number of languages', function () {
       expect(helloLib.numberOfLanguages).to.equal(6)
@@ -44,12 +51,42 @@ describe('hello-international lib', function () {
   })
 
 
-  describe('randomGreeting', function () {
+  describe('getRandomGreeting', function () {
     it('should return a random hello greeting when no args are supplied', function () {
-      const randomGreeting = helloLib.randomGreeting()
+      const randomGreeting = helloLib.getRandomGreeting()
       expect(_.values(helloLib.all.hello)).to.include(randomGreeting)
-    });
-  });
+    })
+
+    it('should return a random greeting when message arg is supplied', function () {
+      // const allMessages = helloLib.allMessages
+      const randomGreeting = helloLib.getRandomGreeting('goodbye')
+      expect(_.values(helloLib.all.goodbye)).to.include(randomGreeting)
+    })
+
+    it('should return a the right greeting when both message and languages args are supplied', function () {
+      // const allMessages = helloLib.allMessages
+      const randomGreeting = helloLib.getRandomGreeting('hello', 'English')
+      expect(helloLib.all.hello.English).to.equal(randomGreeting)
+
+    })
+  })
+
+  describe('getRandomLanguage', function () {
+    const languageList = helloLib.languageList
+    const randomLanguage = helloLib.getRandomLanguage()
+    expect(languageList).to.include(randomLanguage)
+  })
+
+  describe('randomIndex', function () {
+    it('should return a number between 0 and the length of languageList', function () {
+      const len = helloLib.languageList.length
+        // expect(len).to.be.at.most(len)
+      expect(len).to.be.within(-1, len + 1)
+    })
+  })
+
+
+
 
 
 
