@@ -17,7 +17,7 @@ const numberOfLanguages = languageList.length
 const getRandomLanguage = function () {
   // get random index for random language
   const _randomLangIndex = _.random(numberOfLanguages - 1)
-  const _randomLang = languageList[_randomLangIndex]
+  return languageList[_randomLangIndex]
 }
 
 const getRandomGreeting = function (key) {
