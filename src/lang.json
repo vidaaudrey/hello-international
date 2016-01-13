@@ -1,0 +1,24 @@
+{
+  "hello": [{
+    "language": "Abkhaz",
+    "text": "Бзиа збаша (Bzia zbaşa)"
+  }, {
+    "language": "Adyghe",
+    "text": "Фэсапщы"
+  }, {
+    "language": "Afrikaans",
+    "text": "Hallo"
+  }],
+
+  "goodbye": [{
+    "language": "Abkhaz",
+    "text": "Bye temp1"
+  }, {
+    "language": "Adyghe",
+    "text": "Bye temp2"
+  }, {
+    "language": "Afrikaans",
+    "text": "Bye temp3"
+  }]
+
+}
