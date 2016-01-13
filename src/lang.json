@@ -8,6 +8,12 @@
   }, {
     "language": "Afrikaans",
     "text": "Hallo"
+  }, {
+    "language": "Aklan",
+    "text": "Kamusta"
+  }, {
+    "language": "Chinese",
+    "text": "你好！（您好）"
   }],
 
   "goodbye": [{
@@ -19,6 +25,15 @@
   }, {
     "language": "Afrikaans",
     "text": "Bye temp3"
+  }, {
+    "language": "Aklan",
+    "text": "Bye temp4"
+  }, {
+    "language": "Aklan",
+    "text": "Kamusta"
+  }， {
+    "language": "Chinese",
+    "text": "再见"
   }]
 
 }
