@@ -1,0 +1,26 @@
+{
+  "hello": {
+    "Abkhaz": "Бзиа збаша (Bzia zbaşa)",
+    "Adyghe": "Фэсапщы",
+    "Afrikaans": "Hallo",
+    "Aklan": "Kamusta",
+    "Chinese": "你好！（您好）",
+    "English": "How are you?"
+  },
+  "goodbye": {
+    "Abkhaz": "Goodbye placeholder",
+    "Adyghe": "ФэGoodbye placeholder",
+    "Afrikaans": "Goodbye placeholder",
+    "Aklan": "KaGoodbye placeholder",
+    "Chinese": "Goodbye placeholder",
+    "English": "How arGoodbye placeholder"
+  },
+  "how are you": {
+    "Abkhaz": " How are you ",
+    "Adyghe": " How are you ",
+    "Afrikaans": " How are you ",
+    "Aklan": " How are you ",
+    "Chinese": " How are you ",
+    "English": " How are you "
+  }
+}
