@@ -80,8 +80,9 @@ describe('hello-international lib', function () {
   describe('randomIndex', function () {
     it('should return a number between 0 and the length of languageList', function () {
       const len = helloLib.languageList.length
+      const randomIndex = helloLib.randomIndex
         // expect(len).to.be.at.most(len)
-      expect(len).to.be.within(-1, len + 1)
+      expect(randomIndex).to.be.within(-1, len + 1)
     })
   })
 
