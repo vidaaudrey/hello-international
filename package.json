@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "test": "mocha src/index.spec.js -w",
-    "test:single": "mocha src/index.spec.js",
+    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.spec.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -14,10 +14,7 @@
     "url": "https://github.com/vidaaudrey/hello-international.git"
   },
   "keywords": [
-    "greeting",
-    "in",
-    "different",
-    "languages"
+    "greeting in different languages"
   ],
   "author": "Audrey Li <me@audreyli.me> (http://audreyli.me/)",
   "license": "MIT",
@@ -32,6 +29,7 @@
     "chai": "3.4.1",
     "cz-conventional-changelog": "1.1.5",
     "ghooks": "1.0.3",
+    "istanbul": "0.4.2",
     "mocha": "2.3.4",
     "semantic-release": "^4.3.5"
   },
