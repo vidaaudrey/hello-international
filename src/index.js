@@ -30,12 +30,26 @@ const getRandomGreeting = function (message, language) {
   return langData[message][language]
 }
 
+
+const getRandomGreetings = function (count) {
+  if (!count || isNaN(count)) {
+    return getRandomGreeting()
+  }
+  let result = []
+  for (let i = 0; i < count; i++) {
+    result.push(getRandomGreeting())
+  }
+  return result
+
+}
+
 module.exports = {
   all: langData,
   allMessages: Object.keys(langData),
   numberOfLanguages: numberOfLanguages,
   languageList: languageList,
   getRandomGreeting: getRandomGreeting,
+  getRandomGreetings: getRandomGreetings,
   getRandomLanguage: getRandomLanguage,
   randomIndex: _.random(numberOfLanguages - 1)
 }

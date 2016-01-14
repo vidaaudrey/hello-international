@@ -85,6 +85,22 @@ describe('hello-international lib', function () {
     })
   })
 
+  describe('randomGreetings', function () {
+    it('should return one greeting when no argument is specified', function () {
+      expect(helloLib.getRandomGreetings()).to.be.a('string')
+      expect(helloLib.getRandomGreetings('notANumber')).to.be.a('string')
+    })
+
+    it('should return a list of greetings when the number argument is specified', function () {
+      const result = helloLib.getRandomGreetings(3)
+      const hellos = _.values(helloLib.all.hello)
+      expect(result).to.have.length.of(3)
+      result.forEach(function (item) {
+        expect(hellos).to.include(item)
+      })
+    })
+  })
+
 
 
 
