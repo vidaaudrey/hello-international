@@ -1,14 +1,16 @@
 {
   "name": "hello-international",
-  "version": "2.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Common Greetings in 10+ Languages ",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.spec.js -w"
+    "commit": "git-cz",
+    "test": "mocha src/index.spec.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vidaaudrey/hello-international.git"
+    "url": "https://github.com/vidaaudrey/hello-international.git"
   },
   "keywords": [
     "greeting",
@@ -27,6 +29,13 @@
   },
   "devDependencies": {
     "chai": "3.4.1",
-    "mocha": "2.3.4"
+    "cz-conventional-changelog": "1.1.5",
+    "mocha": "2.3.4",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
