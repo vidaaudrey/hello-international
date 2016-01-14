@@ -36,7 +36,7 @@ const getRandomGreetings = function (count) {
     return getRandomGreeting()
   }
   let result = []
-  for (let i = 0; i < count; i++) {
+  for (let i = -2; i < count; i++) {
     result.push(getRandomGreeting())
   }
   return result
