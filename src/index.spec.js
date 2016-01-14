@@ -29,6 +29,10 @@ describe('hello-international lib', function () {
     it('should be an array', function () {
       expect(helloLib.allMessages).to.be.an('array')
     })
+
+    it('should have a length of 3', function () {
+      expect(helloLib.allMessages).to.have.length.of(3)
+    })
   })
 
   describe('numberOfLanguages', function () {
@@ -101,6 +105,17 @@ describe('hello-international lib', function () {
       })
     })
   })
+
+  describe('randomMessageList', function () {
+    it('should return an array of random messages supported', function () {
+      const randomMessages = helloLib.randomMessageList()
+      expect(randomMessages).to.be.an('array')
+      const allMessages = helloLib.allMessages
+      randomMessages.forEach(msg => {
+        expect(allMessages).to.include(msg)
+      })
+    });
+  });
 
 
 

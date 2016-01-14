@@ -43,13 +43,19 @@ const getRandomGreetings = function (count) {
 
 }
 
+const randomMessageList = function () {
+  const allMessages = Object.keys(langData)
+  return allMessages.filter((item, index) => index % 2 === 0)
+}
+
 module.exports = {
   all: langData,
   allMessages: Object.keys(langData),
   numberOfLanguages: numberOfLanguages,
   languageList: languageList,
-  getRandomGreeting: getRandomGreeting,
-  getRandomGreetings: getRandomGreetings,
-  getRandomLanguage: getRandomLanguage,
+  getRandomGreeting,
+  getRandomGreetings,
+  getRandomLanguage,
+  randomMessageList,
   randomIndex: _.random(numberOfLanguages - 1)
 }
